@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import { execSync } from "child_process";
-import fs from "fs";
 import { createPublicKey } from "crypto";
+import fs from "fs";
 
 console.log("🔐 Generating RSA key pair for Epic JWT authentication...\n");
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { SignJWT, importPKCS8 } from "jose";
+import { importPKCS8, SignJWT } from "jose";
 
 const generateBackendJWT = async (clientId: string): Promise<string> => {
   const privateKeyPem = process.env.EPIC_PRIVATE_KEY!;

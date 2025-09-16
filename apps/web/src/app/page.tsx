@@ -1,6 +1,14 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
+import BookAppointmentForm from "@/components/form/appointment/book";
+import FindAppointmentForm from "@/components/form/appointment/find";
+import SearchAppointmentForm from "@/components/form/appointment/search";
+import SearchAccountForm from "@/components/form/billing/account";
+import SearchCoverageForm from "@/components/form/billing/coverage";
+import SearchBinaryForm from "@/components/form/clinical/binary";
 import CreatePatientForm from "@/components/form/patient/create";
+import SearchPatientForm from "@/components/form/patient/search";
+import UpdatePatientForm from "@/components/form/patient/update";
 import { trpc } from "@/utils/trpc";
 
 export default function Home() {
@@ -29,6 +37,14 @@ export default function Home() {
 
         <section className="space-y-4">
           <CreatePatientForm />
+          <SearchPatientForm />
+          <UpdatePatientForm />
+          <BookAppointmentForm />
+          <FindAppointmentForm />
+          <SearchAppointmentForm />
+          <SearchAccountForm />
+          <SearchCoverageForm />
+          <SearchBinaryForm />
         </section>
       </div>
     </div>
