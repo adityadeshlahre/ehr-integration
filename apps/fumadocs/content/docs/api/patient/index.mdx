@@ -1,0 +1,38 @@
+---
+title: Patient Management API
+description: API endpoints for patient operations
+---
+
+# Patient Management API
+
+This section documents all patient-related API endpoints.
+
+## Create Patient
+
+**Endpoint:** `http://localhost:3000/trpc/patient.createPatient`
+
+**Method:** POST (mutation)
+
+**Description:** Creates a new patient record in the EHR system.
+
+**Input:** Full FHIR Patient resource (see example above)
+
+## Search Patients
+
+**Endpoint:** `http://localhost:3000/trpc/patient.getPatients`
+
+**Method:** GET (query)
+
+**Description:** Searches for patients based on various criteria.
+
+**Input:** Patient search parameters (address, name, demographics, etc.)
+
+## Get Patient by ID
+
+**Endpoint:** `http://localhost:3000/trpc/patient.getPatient`
+
+**Method:** GET (query)
+
+**Description:** Retrieves a specific patient by their ID.
+
+**Input:** Patient search parameters (same as search)

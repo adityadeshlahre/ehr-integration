@@ -1,0 +1,48 @@
+---
+title: Billing and Administrative API
+description: API endpoints for billing and administrative operations
+---
+
+# Billing and Administrative API
+
+This section documents all billing and administrative API endpoints.
+
+## Search Accounts
+
+**Endpoint:** `http://localhost:3000/trpc/billing.billing.searchAccount`
+
+**Method:** GET (query)
+
+**Description:** Searches for billing accounts by ID.
+
+**Input:** Account ID
+
+## Get Account by ID
+
+**Endpoint:** `http://localhost:3000/trpc/billing.billing.readAccount`
+
+**Method:** GET (query)
+
+**Description:** Retrieves a specific billing account by its ID.
+
+**Input:** Account ID
+
+## Search Coverage
+
+**Endpoint:** `http://localhost:3000/trpc/billing.coverage.searchCoverage`
+
+**Method:** GET (query)
+
+**Description:** Searches for insurance coverage information.
+
+**Input:** Beneficiary and patient identifiers
+
+## Get Coverage by ID
+
+**Endpoint:** `http://localhost:3000/trpc/billing.coverage.readCoverage`
+
+**Method:** GET (query)
+
+**Description:** Retrieves specific coverage information by ID.
+
+**Input:** Coverage ID

@@ -1,0 +1,41 @@
+---
+title: API Reference
+description: Complete API documentation for EHR Integration Platform
+---
+
+# API Reference
+
+This section contains detailed documentation for all available API endpoints in the EHR Integration Platform.
+
+## Base URL
+
+All API endpoints are available at: `http://localhost:3000/trpc/`
+
+## Authentication
+
+The platform uses Epic FHIR API authentication. Make sure to configure your Epic credentials in the environment variables before using the API.
+
+## Available Endpoints
+
+### System
+- **Health Check:** `http://localhost:3000/trpc/healthCheck` - GET (query) - No input required
+
+### Patient Management
+- [Patient Operations](./patient) - Create, search, read, and match patients
+
+### Appointment Scheduling
+- [Appointment Operations](./appointment) - Book, find, search, and read appointments
+
+### Billing and Administrative
+- [Billing Operations](./billing) - Account and billing management
+
+### Clinical Operations
+- [Clinical Operations](./clinical) - Notes and document management
+
+## Request Format
+
+All requests use tRPC protocol with JSON payloads. Input validation is handled using Zod schemas.
+
+## Response Format
+
+Responses follow the standard tRPC format with success/error status and data payloads.

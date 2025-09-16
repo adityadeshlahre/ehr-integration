@@ -1,0 +1,48 @@
+---
+title: Appointment Scheduling API
+description: API endpoints for appointment operations
+---
+
+# Appointment Scheduling API
+
+This section documents all appointment-related API endpoints.
+
+## Book Appointment
+
+**Endpoint:** `http://localhost:3000/trpc/appointment.bookAppointment`
+
+**Method:** POST (mutation)
+
+**Description:** Books an appointment for a patient.
+
+**Input:** FHIR Parameters resource with patient, appointment, and note information
+
+## Find Appointments
+
+**Endpoint:** `http://localhost:3000/trpc/appointment.findAppointment`
+
+**Method:** POST (mutation)
+
+**Description:** Finds available appointment slots based on patient criteria.
+
+**Input:** FHIR Parameters resource with patient information and scheduling preferences
+
+## Search Appointments
+
+**Endpoint:** `http://localhost:3000/trpc/appointment.searchAppointment`
+
+**Method:** GET (query)
+
+**Description:** Searches for appointments by patient, date, identifier, or status.
+
+**Input:** Search parameters (patient ID, date, identifier, status)
+
+## Get Appointment by ID
+
+**Endpoint:** `http://localhost:3000/trpc/appointment.readAppointment`
+
+**Method:** GET (query)
+
+**Description:** Retrieves a specific appointment by its ID.
+
+**Input:** Appointment ID
