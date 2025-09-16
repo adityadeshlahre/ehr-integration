@@ -10,7 +10,7 @@ export const readCoverageProcedure = publicProcedure
   )
   .query(async ({ input }) => {
     try {
-      const response = await epic.get(`/STU3/Coverage/${input.id}`, {
+      const response = await epic.get(`/Coverage/${input.id}`, {
         headers: {
           Accept: "application/fhir+json",
         },

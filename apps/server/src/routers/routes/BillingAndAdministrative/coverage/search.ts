@@ -15,7 +15,7 @@ export const searchCoverageProcedure = publicProcedure
       if (input.beneficiary) params.append("beneficiary", input.beneficiary);
       if (input.patient) params.append("patient", input.patient);
 
-      const response = await epic.get(`/STU3/Coverage?${params.toString()}`, {
+      const response = await epic.get(`/Coverage?${params.toString()}`, {
         headers: {
           Accept: "application/fhir+json",
         },

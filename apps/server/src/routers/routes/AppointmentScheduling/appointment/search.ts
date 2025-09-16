@@ -28,14 +28,11 @@ export const searchAppointmentProcedure = publicProcedure
       if (input.identifier) params.append("identifier", input.identifier);
       if (input.status) params.append("status", input.status);
 
-      const response = await epic.get(
-        `/STU3/Appointment?${params.toString()}`,
-        {
-          headers: {
-            Accept: "application/fhir+json",
-          },
+      const response = await epic.get(`/Appointment?${params.toString()}`, {
+        headers: {
+          Accept: "application/fhir+json",
         },
-      );
+      });
       return {
         success: true,
         data: response.data,

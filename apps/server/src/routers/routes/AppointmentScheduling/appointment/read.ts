@@ -10,7 +10,7 @@ export const readAppointmentProcedure = publicProcedure
   )
   .query(async ({ input }) => {
     try {
-      const response = await epic.get(`/STU3/Appointment/${input.id}`, {
+      const response = await epic.get(`/Appointment/${input.id}`, {
         headers: {
           Accept: "application/fhir+json",
         },

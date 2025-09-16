@@ -94,7 +94,7 @@ export const createPatientProcedure = publicProcedure
   )
   .mutation(async ({ input }) => {
     try {
-      const response = await epic.post("/STU3/Patient", input, {
+      const response = await epic.post("/Patient", input, {
         headers: {
           "Content-Type": "application/fhir+json",
           Accept: "application/fhir+json",
@@ -116,6 +116,7 @@ export const createPatientProcedure = publicProcedure
 
       if (error && typeof error === "object" && "response" in error) {
         const axiosError = error as any;
+        console.error("Full API response:", axiosError.response?.data);
         throw new Error(
           `API Error: ${axiosError.response?.status} - ${axiosError.response?.data?.issue?.[0]?.details?.text || axiosError.response?.statusText}`,
         );
@@ -128,4 +129,3 @@ export const createPatientProcedure = publicProcedure
       throw new Error("An unknown error occurred");
     }
   });
-

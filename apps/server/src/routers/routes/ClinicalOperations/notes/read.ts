@@ -10,7 +10,7 @@ export const readBinaryProcedure = publicProcedure
   )
   .query(async ({ input }) => {
     try {
-      const response = await epic.get(`/STU3/Binary/${input.id}`, {
+      const response = await epic.get(`/Binary/${input.id}`, {
         headers: {
           Accept: "application/fhir+json",
         },

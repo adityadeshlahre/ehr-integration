@@ -178,7 +178,7 @@ export const findAppointmentProcedure = publicProcedure
   )
   .mutation(async ({ input }) => {
     try {
-      const response = await epic.post("/STU3/Appointment/$find", input, {
+      const response = await epic.post("/Appointment/$find", input, {
         headers: {
           "Content-Type": "application/fhir+json",
           Accept: "application/fhir+json",

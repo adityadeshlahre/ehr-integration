@@ -1,14 +1,14 @@
 "use client";
 
 import { useMutation } from "@tanstack/react-query";
+import type { inferProcedureInput } from "@trpc/server";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "sonner";
-import type { AppRouter } from "../../../../../server/src/routers";
-import type { inferProcedureInput } from "@trpc/server";
 import { trpc } from "@/utils/trpc";
+import type { AppRouter } from "../../../../../server/src/routers";
 
 type CreatePatientInput = inferProcedureInput<
   AppRouter["patient"]["createPatient"]
@@ -24,7 +24,7 @@ export default function CreatePatientForm() {
       onError: (error) => {
         toast.error(`Error: ${error.message}`);
       },
-    })
+    }),
   );
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -68,10 +68,10 @@ export default function CreatePatientForm() {
   };
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
+    <Card className="mx-auto w-full max-w-2xl">
       <CardHeader>
         <CardTitle>Create New Patient</CardTitle>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           ✨ Types are automatically inferred from your server schema - no
           duplicate type definitions needed!
         </p>
@@ -96,7 +96,7 @@ export default function CreatePatientForm() {
                 id="gender"
                 name="gender"
                 required
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:font-medium file:text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 <option value="">Select gender</option>
                 <option value="male">Male</option>

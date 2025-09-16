@@ -30,7 +30,7 @@ export const bookAppointmentProcedure = publicProcedure
   )
   .mutation(async ({ input }) => {
     try {
-      const response = await epic.post("/STU3/Appointment/$book", input, {
+      const response = await epic.post("/Appointment/$book", input, {
         headers: {
           "Content-Type": "application/fhir+json",
           Accept: "application/fhir+json",
