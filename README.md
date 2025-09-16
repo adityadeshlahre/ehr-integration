@@ -1,5 +1,9 @@
 > NOTE: This application requires private keys, which make the API accessible only via those keys. These keys will be stored on your centralized server.
 
+## Demo Video
+
+[![OpenEPIC EHR Integration](https://img.youtube.com/vi/z4BUbWa9ezw/0.jpg)](https://www.youtube.com/watch?v=z4BUbWa9ezw)
+
 # EHR Integration Platform
 
 A comprehensive Electronic Health Record (EHR) integration platform built with modern TypeScript stack, featuring Epic FHIR API integration, patient management, appointment scheduling, and billing operations.
